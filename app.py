@@ -1,21 +1,14 @@
 from flask import Flask, render_template, url_for
 
 app = Flask(__name__)
-app.static_folder = 'static'
 
 @app.route('/')
 def index():
-    return render_template('main.html')
+    try:
+        bg_url = url_for('static', filename='img/gallery/hero-bg.png')
+        return render_template('main.html', bg_url=bg_url)
+    except Exception as e:
+        return str(e)
 
 if __name__ == '__main__':
     app.run(debug=True)
-
-# from flask import Flask, render_template
-
-# app=Flask(__name__)
-
-# @app.route('/')
-# def index():
-#     return render_template('index.html')
-
-# app.run(debug=True)
