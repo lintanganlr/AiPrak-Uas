@@ -72,7 +72,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-12 py-3">
-                            <div class="bg-holder bg-size" style="background-image: url(assets/img/gallery/bg-departments.png); background-position: top center; background-size: contain"></div>
+                            <div class="bg-holder bg-size" style="background-image: url('{{ depart_url }}'); background-position: top center; background-size: contain"></div>
                             <!--/.bg-holder-->
 
                             <h1 class="text-center">OUR DEPARTMENTS</h1>
@@ -177,7 +177,7 @@
             <!-- ============================================-->
 
             <section class="bg-secondary">
-                <div class="bg-holder" style="background-image: url(assets/img/gallery/bg-eye-care.png); background-position: center; background-size: contain"></div>
+                <div class="bg-holder" style="background-image: url('{{ eyecare_url }}'); background-size: contain"></div>
                 <!--/.bg-holder-->
 
                 <div class="container">
@@ -200,7 +200,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-12 py-3">
-                            <div class="bg-holder bg-size" style="background-image: url(assets/img/gallery/about-us.png); background-position: top center; background-size: contain"></div>
+                            <div class="bg-holder bg-size" style="background-image: url('{{ aboutUs_url }}'); background-position: top center; background-size: contain"></div>
                             <!--/.bg-holder-->
 
                             <h1 class="text-center">ABOUT US</h1>
@@ -213,7 +213,7 @@
             <!-- ============================================-->
 
             <section class="py-5">
-                <div class="bg-holder bg-size" style="background-image: url(assets/img/gallery/about-bg.png); background-position: top center; background-size: contain"></div>
+                <div class="bg-holder bg-size" style="background-image: url('{{ about_url }}'); background-position: top center; background-size: contain"></div>
                 <!--/.bg-holder-->
 
                 <div class="container">
@@ -239,7 +239,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-12 py-3">
-                            <div class="bg-holder bg-size" style="background-image: url(assets/img/gallery/doctors-us.png); background-position: top center; background-size: contain"></div>
+                            <div class="bg-holder bg-size" style="background-image: url('{{ doctorsUs_url }}'); background-position: top center; background-size: contain"></div>
                             <!--/.bg-holder-->
 
                             <h1 class="text-center">OUR DOCTORS</h1>
@@ -252,7 +252,7 @@
             <!-- ============================================-->
 
             <section class="py-5">
-                <div class="bg-holder bg-size" style="background-image: url(assets/img/gallery/doctors-bg.png); background-position: top center; background-size: contain"></div>
+                <div class="bg-holder bg-size" style="background-image: url('{{ doctors_url }}'); background-position: top center; background-size: contain"></div>
                 <!--/.bg-holder-->
 
                 <div class="container">
@@ -416,7 +416,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-12 py-3">
-                            <div class="bg-holder bg-size" style="background-image: url(assets/img/gallery/people.png); background-position: top center; background-size: contain"></div>
+                            <div class="bg-holder bg-size" style="background-image: url('{{ people_url }}'); background-position: top center; background-size: contain"></div>
                             <!--/.bg-holder-->
 
                             <h1 class="text-center">PEOPLE WHO LOVE US</h1>
@@ -429,7 +429,7 @@
             <!-- ============================================-->
 
             <section class="py-8">
-                <div class="bg-holder bg-size" style="background-image: url(assets/img/gallery/people-bg-1.png); background-position: center; background-size: cover"></div>
+                <div class="bg-holder bg-size" style="background-image:url('{{ people1_url }}'); background-position: center; background-size: cover"></div>
                 <!--/.bg-holder-->
 
                 <div class="container">
@@ -511,7 +511,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-12 py-3">
-                            <div class="bg-holder bg-size" style="background-image: url(assets/img/gallery/people.png); background-position: top center; background-size: contain"></div>
+                            <div class="bg-holder bg-size" style="background-image: url('{{ people_url }}'); background-position: top center; background-size: contain"></div>
                             <!--/.bg-holder-->
 
                             <h1 class="text-center">APPOINTMENT</h1>
@@ -526,7 +526,7 @@
             <section class="py-8">
                 <div class="container">
                     <div class="row">
-                        <div class="bg-holder bg-size" style="background-image: url(assets/img/gallery/dot-bg.png); background-position: bottom right; background-size: auto"></div>
+                        <div class="bg-holder bg-size" style="background-image: url('{{ dotbg_url }}');; background-position: bottom right; background-size: auto"></div>
                         <!--/.bg-holder-->
 
                         <div class="col-lg-6 z-index-2 mb-5"><img class="w-100" src="{{ url_for('static', filename='img/gallery/appointment.png') }}" alt="..." /></div>
@@ -574,7 +574,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-12 py-3">
-                            <div class="bg-holder bg-size" style="background-image: url(assets/img/gallery/blog-post.png); background-position: top center; background-size: contain"></div>
+                            <div class="bg-holder bg-size" style="background-image: url('{{ blog_url }}'); background-position: top center; background-size: contain"></div>
                             <!--/.bg-holder-->
 
                             <h1 class="text-center">RECENT BLOGPOSTS</h1>
@@ -587,7 +587,7 @@
             <!-- ============================================-->
 
             <section>
-                <div class="bg-holder bg-size" style="background-image: url(assets/img/gallery/dot-bg.png); background-position: top left; background-size: auto"></div>
+                <div class="bg-holder bg-size" style="background-image: url('{{ dotbg_url }}'); background-position: top left; background-size: auto"></div>
                 <!--/.bg-holder-->
 
                 <div class="container">
@@ -601,7 +601,7 @@
                                         <path
                                             d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H2z"
                                         ></path>
-                                        <path d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V4z"></path></svg
+                                        <path d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V4z"></path></svg>
                                     ><span class="fs--1 text-900">Nov 21, 2021</span><span class="fs--1"></span>
                                     <h5 class="font-base fs-lg-0 fs-xl-1 my-3">COVID-19: The Most Up-to-Date Information</h5>
                                     <a class="stretched-link" href="#!">read full article</a>
@@ -617,7 +617,7 @@
                                         <path
                                             d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H2z"
                                         ></path>
-                                        <path d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V4z"></path></svg
+                                        <path d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V4z"></path></svg>
                                     ><span class="fs--1 text-900">Nov 25, 2021</span><span class="fs--1"></span>
                                     <h5 class="font-base fs-lg-0 fs-xl-1 my-3">Importance of Accreditation for Laboratories</h5>
                                     <a class="stretched-link" href="#!">read full article</a>
@@ -633,7 +633,7 @@
                                         <path
                                             d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H2z"
                                         ></path>
-                                        <path d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V4z"></path></svg
+                                        <path d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V4z"></path></svg>
                                     ><span class="fs--1 text-900">Nov 28, 2021</span><span class="fs--1"></span>
                                     <h5 class="font-base fs-lg-0 fs-xl-1 my-3">The dangers of nicotine are addressed in depth</h5>
                                     <a class="stretched-link" href="#!">read full article</a>
@@ -649,7 +649,7 @@
                                         <path
                                             d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H2z"
                                         ></path>
-                                        <path d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V4z"></path></svg
+                                        <path d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V4z"></path></svg>
                                     ><span class="fs--1 text-900">Nov 30, 2021</span><span class="fs--1"></span>
                                     <h5 class="font-base fs-lg-0 fs-xl-1 my-3">Treatment of patients with diabetes during COVID-19</h5>
                                     <a class="stretched-link" href="#!">read full article</a>
@@ -660,7 +660,7 @@
                 </div>
             </section>
             <section class="bg-primary">
-                <div class="bg-holder bg-size" style="background-image: url(assets/img/gallery/cta-bg.png); background-position: center right; margin-top: -8.125rem; background-size: contain"></div>
+                <div class="bg-holder bg-size" style="background-image: url('{{ ctabg_url }}'); background-position: center right; margin-top: -8.125rem; background-size: contain"></div>
                 <!--/.bg-holder-->
 
                 <div class="container">
@@ -687,7 +687,7 @@
                 </div>
             </section>
             <section class="py-0 bg-secondary">
-                <div class="bg-holder opacity-25" style="background-image: url(assets/img/gallery/dot-bg.png); background-position: top left; margin-top: -3.125rem; background-size: auto"></div>
+                <div class="bg-holder opacity-25" style="background-image: url('{{ dotbg_url }}'); background-position: top left; margin-top: -3.125rem; background-size: auto"></div>
                 <!--/.bg-holder-->
 
                 <div class="container">
@@ -735,7 +735,7 @@
                                 <p class="fs--1 my-2 text-center text-md-end text-200">
                                     Made with&nbsp;
                                     <svg class="bi bi-suit-heart-fill" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#F95C19" viewBox="0 0 16 16">
-                                        <path d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z"></path></svg
+                                        <path d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z"></path></svg>
                                     >&nbsp;by&nbsp;<a class="fw-bold text-info" href="https://themewagon.com/" target="_blank">ThemeWagon </a>
                                 </p>
                             </div>
@@ -754,14 +754,14 @@
         <!-- ===============================================-->
         <!--    JavaScripts-->
         <!-- ===============================================-->
-        <script src="vendors/@popperjs/popper.min.js"></script>
-        <script src="vendors/bootstrap/bootstrap.min.js"></script>
-        <script src="vendors/is/is.min.js"></script>
+        <script src="{{ url_for('static', filename='vendors/@popperjs/popper.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='vendors/bootstrap/bootstrap.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='vendors/is/is.min.js') }}"></script>
         <script src="https://scripts.sirv.com/sirvjs/v3/sirv.js"></script>
         <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
-        <script src="vendors/fontawesome/all.min.js"></script>
-        <script src="assets/js/theme.js"></script>
-
+        <script src="{{ url_for('static', filename='vendors/fontawesome/all.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/theme.js') }}"></script>
+        
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&amp;family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100&amp;display=swap" rel="stylesheet" />
