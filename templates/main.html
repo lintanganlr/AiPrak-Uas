@@ -42,13 +42,16 @@
                     </button>
                     <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto pt-2 pt-lg-0 font-base">
+                            <li class="nav-item px-2"><a class="nav-link" href="#artikel">Article</a></li>
                             <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="#about">About Us</a></li>
-                            <li class="nav-item px-2"><a class="nav-link" href="#departments">Departments</a></li>
-                            <li class="nav-item px-2"><a class="nav-link" href="#findUs">Membership</a></li>
+                            <li class="nav-item px-2"><a class="nav-link" href="#blog">Our Blog</a></li>
+                            
+                            
+                            <!-- <li class="nav-item px-2"><a class="nav-link" href="#findUs">Membership</a></li>
                             <li class="nav-item px-2"><a class="nav-link" href="#findUs">Help </a></li>
-                            <li class="nav-item px-2"><a class="nav-link" href="#findUs">Contact</a></li>
+                            <li class="nav-item px-2"><a class="nav-link" href="#findUs">Contact</a></li> -->
                         </ul>
-                        <a class="btn btn-sm btn-outline-primary rounded-pill order-1 order-lg-0 ms-lg-4" href="#!">Sign In</a>
+                        <a class="btn btn-sm btn-outline-primary rounded-pill order-1 order-lg-0 ms-lg-4" href="#cekAsma">Cek Asma</a>
                     </div>
                 </div>
             </nav>
@@ -63,7 +66,7 @@
                             <h1 class="fw-light font-base fs-6 fs-xxl-7">Elevate <strong>Your Life</strong><br />One&nbsp;<strong> Breath at a Time.</strong></h1>
                             <p class="fs-1 mb-5">
                                 Discover if you have asthma with our 24/7 expert system. Get </br> accurate results and personalized guidance, anytime.</p>
-                            <a class="btn btn-lg btn-primary rounded-pill" href="#!" role="button">Check Now</a>
+                            <a class="btn btn-lg btn-primary rounded-pill" href="#cekAsma" role="button">Check Now</a>
                         </div>
                     </div>
                 </div>
@@ -72,25 +75,23 @@
 
             <!-- ============================================-->
             <!-- <section> begin ============================-->
-            <section class="py-5" id="departments">
+            <!-- <section class="py-5" id="departments">
                 <div class="container">
                     <div class="row">
                         <div class="col-12 py-3">
                             <div class="bg-holder bg-size" style="background-image: url('{{ depart_url }}'); background-position: top center; background-size: contain"></div>
-                            <!--/.bg-holder-->
 
                             <h1 class="text-center">OUR DEPARTMENTS</h1>
                         </div>
                     </div>
                 </div>
-                <!-- end of .container-->
-            </section>
+            </section> -->
             <!-- <section> close ============================-->
             <!-- ============================================-->
 
             <!-- ============================================-->
             <!-- <section> begin ============================-->
-            <section class="py-0">
+            <!-- <section class="py-0">
                 <div class="container">
                     <div class="row py-5 align-items-center justify-content-center justify-content-lg-evenly">
                         <div class="col-auto col-md-4 col-lg-auto text-xl-start">
@@ -175,12 +176,11 @@
                         </div>
                     </div>
                 </div>
-                <!-- end of .container-->
-            </section>
+            </section> -->
             <!-- <section> close ============================-->
             <!-- ============================================-->
 
-            <section class="bg-secondary">
+            <section class="bg-secondary" id="artikel">
                 <div class="bg-holder" style="background-image: url('{{ eyecare_url }}'); background-size: contain"></div>
                 <!--/.bg-holder-->
 
@@ -494,14 +494,14 @@
 
             <!-- ============================================-->
             <!-- <section> begin ============================-->
-            <section class="py-5">
+            <section class="py-5" id="cekAsma">
                 <div class="container">
                     <div class="row">
                         <div class="col-12 py-3">
                             <div class="bg-holder bg-size" style="background-image: url('{{ people_url }}'); background-position: top center; background-size: contain"></div>
                             <!--/.bg-holder-->
 
-                            <h1 class="text-center">APPOINTMENT</h1>
+                            <h1 class="text-center">CEK GEJALA ASMA</h1>
                         </div>
                     </div>
                 </div>
@@ -516,37 +516,49 @@
                         <div class="bg-holder bg-size" style="background-image: url('{{ dotbg_url }}');; background-position: bottom right; background-size: auto"></div>
                         <!--/.bg-holder-->
 
-                        <div class="col-lg-6 z-index-2 mb-5"><img class="w-100" src="{{ url_for('static', filename='img/gallery/appointment.png') }}" alt="..." /></div>
-                        <div class="col-lg-6 z-index-2">
+                        <!-- <div class="col-lg-6 z-index-2 mb-5"><img class="w-100" src="{{ url_for('static', filename='img/gallery/appointment.png') }}" alt="..." /></div> -->
+                        <div class="z-index-2">
                             <form class="row g-3">
                                 <div class="col-md-6">
                                     <label class="visually-hidden" for="inputName">Name</label>
                                     <input class="form-control form-livedoc-control" id="inputName" type="text" placeholder="Name" />
                                 </div>
                                 <div class="col-md-6">
-                                    <label class="visually-hidden" for="inputPhone">Phone</label>
-                                    <input class="form-control form-livedoc-control" id="inputPhone" type="text" placeholder="Phone" />
+                                    <label class="visually-hidden" for="inputUsia">Usia</label>
+                                    <input class="form-control form-livedoc-control" id="inputUsia" type="number" placeholder="Usia" />
                                 </div>
-                                <div class="col-md-6">
-                                    <label class="form-label visually-hidden" for="inputCategory">Category</label>
-                                    <select class="form-select" id="inputCategory">
-                                        <option selected="selected">Category</option>
-                                        <option>Category One</option>
-                                        <option>Category Two</option>
-                                        <option>Category Three</option>
+                                <div class="col-md-12">
+                                    <label class="form-label visually-hidden" for="inputGejala" placeholder="Gejala">Gejala</label>
+                                    <select class="form-select" id="inputGejala" name="inputGejala">                                        
+                                        <option value="Kesulitan Bernafas (Sesak Nafas)">Kesulitan Bernafas (Sesak Nafas)</option>
+                                        <option value="Sering Batuk (Kering, Berdahak)">Sering Batuk (Kering, Berdahak)</option>
+                                        <option value="Suara Nafas (Mengi, Bengi)">Suara Nafas (Mengi, Bengi)</option>
+                                        <option value="Dada Terasa Sesak (Dada Sakit)">Dada Terasa Sesak (Dada Sakit)</option>
+                                        <option value="Lesu dan Lelah">Lesu dan Lelah</option>
+                                        <option value="Susah Tidur (Karena sering batuk)">Susah Tidur (Karena sering batuk)</option>
+                                        <option value="Mengalami masalah pernafasan (Aktivitas Fisik)">Mengalami masalah pernafasan (Aktivitas Fisik)</option>
+                                        <option value="Penurunan Fungsi Paru-Paru sebagai jalan masuk oksigen">Penurunan Fungsi Paru-Paru sebagai jalan masuk oksigen</option>
+                                        <option value="Lebih Sensitif terhadap Alergi">Lebih Sensitif terhadap Alergi</option>
+                                        <option value="Memburuk di malam hari">Memburuk di malam hari</option>
+                                        <option value="Infeksi Pernapasan (pemicu iritasi)">Infeksi Pernapasan (pemicu iritasi)</option>
+                                        <option value="Panas">Panas</option>
                                     </select>
+                                    <div class="form-label" id="selected-options">
+                                        <strong>Gejala Terpilih:</strong>
+                                        <span id="options-list">Tidak ada</span>
+                                    </div>
                                 </div>
-                                <div class="col-md-6">
+                                <!-- <div class="col-md-6">
                                     <label class="form-label visually-hidden" for="inputEmail">Email</label>
                                     <input class="form-control form-livedoc-control" id="inputEmail" type="email" placeholder="Email" />
                                 </div>
                                 <div class="col-md-12">
                                     <label class="form-label visually-hidden" for="validationTextarea">Message</label>
                                     <textarea class="form-control form-livedoc-control" id="validationTextarea" placeholder="Message" style="height: 250px" required="required"></textarea>
-                                </div>
+                                </div> -->
                                 <div class="col-12">
                                     <div class="d-grid">
-                                        <button class="btn btn-primary rounded-pill" type="submit">Sign in</button>
+                                        <button class="btn btn-primary rounded-pill" type="submit">Cek Gejala</button>
                                     </div>
                                 </div>
                             </form>
@@ -557,7 +569,7 @@
 
             <!-- ============================================-->
             <!-- <section> begin ============================-->
-            <section class="py-5">
+            <section class="py-5" id="blog">
                 <div class="container">
                     <div class="row">
                         <div class="col-12 py-3">
@@ -652,32 +664,31 @@
                 <!--/.bg-holder-->
 
                 <div class="container">
-                    <div class="row py-8">
-                        <div class="col-12 col-sm-12 col-lg-6 mb-4 order-0 order-sm-0">
+                    <div class="row py-8 d-flex justify-content-between align-items-center">
+                        <div class="col-auto mb-4">
                             <a class="text-decoration-none" href="#"><img src="{{ url_for('static', filename='img/gallery/footer-logo.png') }}" height="51" alt="" /></a>
-                           
                         </div>
-                        <div class="col-6 col-sm-4 col-lg-2 mb-3 order-2 order-sm-1">
-                            <h5 class="lh-lg fw-bold mb-4 text-light font-sans-serif">434221034</h5>
-                            <ul class="list-unstyled mb-md-4 mb-lg-0">
+                        <div class="col-auto mb-3 text-center">
+                            <h5 class="lh-lg fw-bold mb-2 text-light font-sans-serif">434221034</h5>
+                            <ul class="list-unstyled">
                                 <li class="lh-lg"><a class="footer-link" href="#!">Anisa Maharani</a></li>
                             </ul>
                         </div>
-                        <div class="col-6 col-sm-4 col-lg-2 mb-3 order-3 order-sm-2">
-                            <h5 class="lh-lg fw-bold text-light mb-4 font-sans-serif">434221051</h5>
-                            <ul class="list-unstyled mb-md-4 mb-lg-0">
+                        <div class="col-auto mb-3 text-center">
+                            <h5 class="lh-lg fw-bold text-light mb-2 font-sans-serif">434221051</h5>
+                            <ul class="list-unstyled">
                                 <li class="lh-lg"><a class="footer-link" href="#!">Fairuz Zahira</a></li>
                             </ul>
                         </div>
-                        <div class="col-6 col-sm-4 col-lg-2 mb-3 order-3 order-sm-2">
-                            <h5 class="lh-lg fw-bold text-light mb-4 font-sans-serif">434221052</h5>
-                            <ul class="list-unstyled mb-md-4 mb-lg-0">
+                        <div class="col-auto mb-3 text-center">
+                            <h5 class="lh-lg fw-bold text-light mb-2 font-sans-serif">434221052</h5>
+                            <ul class="list-unstyled">
                                 <li class="lh-lg"><a class="footer-link" href="#!">Amelia Nur Indah P</a></li>
                             </ul>
                         </div>
-                        <div class="col-6 col-sm-4 col-lg-2 mb-3 order-3 order-sm-2">
-                            <h5 class="lh-lg fw-bold text-light mb-4 font-sans-serif">434221057</h5>
-                            <ul class="list-unstyled mb-md-4 mb-lg-0">
+                        <div class="col-auto mb-3 text-center">
+                            <h5 class="lh-lg fw-bold text-light mb-2 font-sans-serif">434221057</h5>
+                            <ul class="list-unstyled">
                                 <li class="lh-lg"><a class="footer-link" href="#!">Lintang Anggraini Nur L.R</a></li>
                             </ul>
                         </div>
@@ -715,6 +726,30 @@
         <!-- ===============================================-->
         <!--    JavaScripts-->
         <!-- ===============================================-->
+
+        <script>
+            let selectedActivities = [];
+    
+            document.getElementById('inputGejala').addEventListener('change', function () {
+                const selectedText = this.options[this.selectedIndex].text;
+                const selectedIndex = selectedActivities.indexOf(selectedText);
+    
+                if (selectedIndex === -1) {
+                    selectedActivities.push(selectedText);
+                } else {
+                    selectedActivities.splice(selectedIndex, 1);
+                }
+    
+                updateSelectedOptions();
+            });
+    
+            function updateSelectedOptions() {
+                const optionsList = selectedActivities.length > 0 ? selectedActivities.join(', ') : 'Tidak ada';
+                document.getElementById('options-list').textContent = optionsList;
+            }
+        </script>
+
+
         <script src="{{ url_for('static', filename='vendors/@popperjs/popper.min.js') }}"></script>
         <script src="{{ url_for('static', filename='vendors/bootstrap/bootstrap.min.js') }}"></script>
         <script src="{{ url_for('static', filename='vendors/is/is.min.js') }}"></script>
