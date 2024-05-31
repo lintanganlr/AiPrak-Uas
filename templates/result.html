@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil Diagnosis</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Hasil Diagnosis</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h4>Gejala yang Dipilih:</h4>
+                <p>{{ selected_options }}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h4>Hasil:</h4>
+                {% for hasil in hasil_diagnosis %}
+                    <p>Penyakit: {{ hasil.penyakit }}</p>
+                    <p>Kepercayaan (CF): {{ hasil.cf }}</p>
+                    <p>Gejala Terkait:</p>
+                    <ul>
+                        {% for gejala in hasil.gejala %}
+                            <li>{{ gejala }}</li>
+                        {% endfor %}
+                    </ul>
+                    <hr>
+                {% endfor %}
+                {% if not hasil_diagnosis %}
+                    <p>Tidak ada hasil diagnosis untuk gejala yang dipilih.</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>
