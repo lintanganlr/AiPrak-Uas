@@ -101,14 +101,17 @@ def index():
 @app.route('/diagnose', methods=['POST'])
 def diagnose():
     try:
-        gejala_input = request.form.getlist('gejala')
+        gejala_input = request.form.getlist('inputGejala')  # Mendapatkan semua gejala yang dipilih
+        
         CF_dict = {}
         penyakit_terkait_dict = {}
 
+        # Proses untuk menghitung CF berdasarkan hubungan data
         for (gejala, penyakit), nilai in hubungan_data.items():
             MB = nilai["MB"]
             MD = nilai["MD"]
             CF = MB - MD
+            
             if gejala in gejala_input:
                 if penyakit not in CF_dict:
                     CF_dict[penyakit] = CF
@@ -119,7 +122,7 @@ def diagnose():
                 penyakit_terkait_dict[penyakit] = []
             penyakit_terkait_dict[penyakit].append(gejala)
 
-        # Sort CF_dict by CF values in descending order and select top 2
+        # Mengurutkan CF_dict berdasarkan nilai CF secara menurun dan memilih 2 teratas
         sorted_CF_dict = dict(sorted(CF_dict.items(), key=lambda item: item[1], reverse=True)[:2])
         
         hasil_diagnosis = []
@@ -132,9 +135,14 @@ def diagnose():
                 })
 
         if not hasil_diagnosis:
-            hasil_diagnosis.append({"penyakit": "Tidak ada penyakit yang terdeteksi berdasarkan gejala yang Anda masukkan.", "cf": "", "gejala": []})
+            hasil_diagnosis.append({
+                "penyakit": "Tidak ada penyakit yang terdeteksi berdasarkan gejala yang Anda masukkan.",
+                "cf": "",
+                "gejala": []
+            })
         
-        return render_template('result.html', hasil_diagnosis=hasil_diagnosis, gejala_input=[gejala_data[g] for g in gejala_input])
+        return render_template('result.html', hasil_diagnosis=hasil_diagnosis, gejala_input=gejala_input, gejala_data=gejala_data)
+    
     except Exception as e:
         return str(e)
 

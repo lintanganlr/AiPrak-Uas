@@ -15,7 +15,12 @@
         <div class="row">
             <div class="col-md-12">
                 <h4>Gejala yang Dipilih:</h4>
-                <p>{{ selected_options }}</p>
+                <p>
+                    {% for gejala in gejala_input %}
+                        {{ gejala_data[gejala] }}
+                        {% if not loop.last %}, {% endif %}
+                    {% endfor %}
+                </p>
             </div>
         </div>
         <div class="row">
@@ -32,9 +37,6 @@
                     </ul>
                     <hr>
                 {% endfor %}
-                {% if not hasil_diagnosis %}
-                    <p>Tidak ada hasil diagnosis untuk gejala yang dipilih.</p>
-                {% endif %}
             </div>
         </div>
     </div>
