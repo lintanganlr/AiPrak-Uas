@@ -1,44 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hasil Diagnosis</title>
-</head>
-<body>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h2>Hasil Diagnosis</h2>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Diagnosis Result</title>
+        <!-- Include any necessary CSS stylesheets or meta tags -->
+        <style>
+            .bg-holder {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                z-index: -1;
+                background-size: auto;
+                background-position: bottom right;
+            }
+            .z-index-2 {
+                position: relative;
+                z-index: 2;
+            }
+            .card {
+                margin-bottom: 20px;
+                border: 1px solid #ccc;
+                border-radius: 8px;
+                padding: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+        </style>
+    </head>
+    <body>
+        <section class="py-8">
+            <div class="container">
+                <div class="row">
+                    <div class="bg-holder bg-size" style="background-image: url('{{ dotbg_url }}');"></div>
+                    <!--/.bg-holder-->
+
+                    <div class="z-index-2">
+                        <h1 class="text-center mb-5">Diagnosis Result</h1>
+
+                        <h2>Patient Information</h2>
+                        <p><strong>Name:</strong> {{ name }}</p>
+                        <p><strong>Age:</strong> {{ usia }}</p>
+
+                        <h2>Diagnosis</h2>
+                        {% if hasil_diagnosis %} {% for hasil in hasil_diagnosis %}
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Diagnosed Disease: {{ hasil.penyakit }}</h5>
+                                <p class="card-text"><strong>Confidence Level:</strong> {{ hasil.cf }}</p>
+                                <p class="card-text"><strong>Symptoms/Factors:</strong></p>
+                                <ul>
+                                    {% for gejala in hasil.gejala %}
+                                    <li>{{ gejala }}</li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </div>
+                        {% endfor %} {% else %}
+                        <p>No disease detected based on the symptoms and factors entered.</p>
+                        {% endif %}
+
+                        <a href="/" class="btn btn-primary rounded-pill mt-4">Back to Diagnosis Form</a>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <h4>Gejala yang Dipilih:</h4>
-                <p>
-                    {% for gejala in gejala_input %}
-                        {{ gejala_data[gejala] }}
-                        {% if not loop.last %}, {% endif %}
-                    {% endfor %}
-                </p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <h4>Hasil:</h4>
-                {% for hasil in hasil_diagnosis %}
-                    <p>Penyakit: {{ hasil.penyakit }}</p>
-                    <p>Kepercayaan (CF): {{ hasil.cf }}</p>
-                    <p>Gejala Terkait:</p>
-                    <ul>
-                        {% for gejala in hasil.gejala %}
-                            <li>{{ gejala }}</li>
-                        {% endfor %}
-                    </ul>
-                    <hr>
-                {% endfor %}
-            </div>
-        </div>
-    </div>
-</body>
+        </section>
+
+        <!-- Include any necessary JavaScript scripts or footer content -->
+    </body>
 </html>

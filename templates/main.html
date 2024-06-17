@@ -143,68 +143,48 @@
             </section>
             <!-- <section> close ============================-->
             <!-- ============================================-->
-
-            <section class="py-8">
-                <div class="container">
-                    <div class="row">
-                        <div class="bg-holder bg-size" style="background-image: url('{{ dotbg_url }}');; background-position: bottom right; background-size: auto"></div>
-                        <!--/.bg-holder-->
-
-                        <!-- <div class="col-lg-6 z-index-2 mb-5"><img class="w-100" src="{{ url_for('static', filename='img/gallery/appointment.png') }}" alt="..." /></div> -->
-                        <div class="z-index-2">
-                            <form class="row g-3" method="POST" action="{{ url_for('diagnose') }}">
-                                
-                                <div class="col-md-6">
-                                    <label class="visually-hidden" for="inputName">Name</label>
-                                    <input class="form-control form-livedoc-control" id="inputName" type="text" placeholder="Name" />
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="visually-hidden" for="inputUsia">Usia</label>
-                                    <input class="form-control form-livedoc-control" id="inputUsia" type="number" placeholder="Usia" />
-                                </div>
-                                <div class="col-md-12">
-                                    <label class="form-label visually-hidden" for="inputGejala" placeholder="Gejala">Gejala</label>
-                                    <select class="form-select" id="inputGejala" name="inputGejala">
-                                        {% for key, value in gejala_data.items() %}
-                                        <option value="{{ key }}">{{ value }}</option>
-                                        {% endfor %}
-                                    </select>
-                                    <div class="form-label" id="selected-options">
-                                        <strong>Gejala Terpilih:</strong>
-                                        <span id="options-list">Tidak ada</span>
-                                    </div>
-                                </div>                
-                                <div class="col-12">
-                                    <div class="d-grid">
-                                        <button class="btn btn-primary rounded-pill" type="submit">Cek Gejala</button>
-                                        <!-- onclick="getSelectedOptions()" -->
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
+            <!--  -->
+            <form action="/diagnose" method="POST">
+                <!-- Existing symptom input -->
+                <div class="form-group">
+                    <label for="inputGejala">Gejala:</label><br>
+                    {% for key, value in gejala_data.items() %}
+                    <input type="checkbox" id="gejala_{{ key }}" name="inputGejala" value="{{ key }}">
+                    <label for="gejala_{{ key }}">{{ value }}</label><br>
+                    {% endfor %}
                 </div>
-
-                <script>
-                    // Memastikan bahwa halaman telah dimuat sepenuhnya
-                    document.addEventListener('DOMContentLoaded', function() {
-                        // Menambahkan event listener pada elemen select dengan id inputGejala
-                        document.getElementById('inputGejala').addEventListener('change', function () {
-                            const selectedOptions = Array.from(this.selectedOptions).map(option => option.value);
-                            updateSelectedOptions(selectedOptions);
-                        });
-                
-                        // Fungsi untuk memperbarui daftar gejala terpilih
-                        function updateSelectedOptions(selectedOptions) {
-                            const optionsList = selectedOptions.length > 0 ? selectedOptions.map(key => gejala_data[key]).join(', ') : 'Tidak ada';
-                            document.getElementById('options-list').textContent = optionsList;
-                        }
-                    });
-                </script>
-                
-                
-
-            </section>
+            
+                <!-- New environmental factors input -->
+                <div class="form-group">
+                    <label for="inputEnvironmental">Environmental Factors:</label><br>
+                    {% for key, value in environmental_factors.items() %}
+                    <input type="checkbox" id="env_{{ key }}" name="inputEnvironmental" value="{{ key }}">
+                    <label for="env_{{ key }}">{{ value }}</label><br>
+                    {% endfor %}
+                </div>
+            
+                <!-- New triggers input -->
+                <div class="form-group">
+                    <label for="inputTrigger">Triggers:</label><br>
+                    {% for key, value in triggers.items() %}
+                    <input type="checkbox" id="trig_{{ key }}" name="inputTrigger" value="{{ key }}">
+                    <label for="trig_{{ key }}">{{ value }}</label><br>
+                    {% endfor %}
+                </div>
+            
+                <!-- Existing name and age input -->
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="usia">Age:</label>
+                    <input type="text" id="usia" name="usia" required>
+                </div>
+            
+                <button type="submit" class="btn btn-primary">Diagnose</button>
+            </form>
+            
 
             <!-- ============================================-->
             <!-- <section> begin ============================-->
