@@ -1,106 +1,417 @@
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr">
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <!-- ===============================================-->
-        <!--    Document Title-->
-        <!-- ===============================================-->
-        <title>BreathEase | Medical Clinic</title>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <!-- ===============================================-->
-        <!--    Favicons-->
-        	    <!-- Tautan ke favicon -->
-		<link rel="icon" type="image/png" href="{{ url_for('static', filename='img/gallery/favicon.png') }}">
-        <!-- ===============================================-->
-        <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png" />
-        <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicons/favicon.ico" />
-        <link rel="manifest" href="assets/img/favicons/manifest.json" />
-        <meta name="msapplication-TileImage" content="assets/img/favicons/mstile-150x150.png" />
-        <meta name="theme-color" content="#ffffff" />
+    <!-- ===============================================-->
+    <!--    Document Title-->
+    <!-- ===============================================-->
+    <title>BreathEase | Medical Clinic</title>
 
-        <!-- ===============================================-->
-        <!--    Stylesheets-->
-        <!-- ===============================================-->
-        <link href="{{ url_for('static', filename='css/theme.css') }}" rel="stylesheet" />
-    </head>
+    <!-- ===============================================-->
+    <!--    Favicons-->
+    <!-- Tautan ke favicon -->
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/gallery/favicon.png') }}">
+    <!-- ===============================================-->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png" />
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicons/favicon.ico" />
+    <link rel="manifest" href="assets/img/favicons/manifest.json" />
+    <meta name="msapplication-TileImage" content="assets/img/favicons/mstile-150x150.png" />
+    <meta name="theme-color" content="#ffffff" />
 
-    <body>
-        <!-- ===============================================-->
-        <!--    Main Content-->
-        <!-- ===============================================-->
-        <main class="main" id="top">
-            <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3 d-block" data-navbar-on-scroll="data-navbar-on-scroll">
-                <div class="container">
-                    <a class="navbar-brand" href="index.html"><img src="{{ url_for('static', filename='img/gallery/logo.png') }}" width="118" alt="Logo" /></a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"> </span>
-                    </button>
-                    <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
-                        <ul class="navbar-nav ms-auto pt-2 pt-lg-0 font-base">
-                            <li class="nav-item px-2"><a class="nav-link" href="#artikel">Article</a></li>
-                            <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="#about">About Us</a></li>
-                            <li class="nav-item px-2"><a class="nav-link" href="#blog">Our Blog</a></li>
-                            
-                            
-                            <!-- <li class="nav-item px-2"><a class="nav-link" href="#findUs">Membership</a></li>
+    <!-- ===============================================-->
+    <!--    Stylesheets-->
+    <!-- ===============================================-->
+    <link href="{{ url_for('static', filename='css/theme.css') }}" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- ===============================================-->
+    <!--    Main Content-->
+    <!-- ===============================================-->
+    <main class="main" id="top">
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3 d-block"
+            data-navbar-on-scroll="data-navbar-on-scroll">
+            <div class="container">
+                <a class="navbar-brand" href="index.html"><img
+                        src="{{ url_for('static', filename='img/gallery/logo.png') }}" width="118" alt="Logo" /></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"> </span>
+                </button>
+                <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto pt-2 pt-lg-0 font-base">
+                        <li class="nav-item px-2"><a class="nav-link" href="#artikel">Article</a></li>
+                        <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="#about">About Us</a>
+                        </li>
+                        <li class="nav-item px-2"><a class="nav-link" href="#blog">Our Blog</a></li>
+
+
+                        <!-- <li class="nav-item px-2"><a class="nav-link" href="#findUs">Membership</a></li>
                             <li class="nav-item px-2"><a class="nav-link" href="#findUs">Help </a></li>
                             <li class="nav-item px-2"><a class="nav-link" href="#findUs">Contact</a></li> -->
+                    </ul>
+                    <a class="btn btn-sm btn-outline-primary rounded-pill order-1 order-lg-0 ms-lg-4"
+                        href="#cekAsma">Cek Asma</a>
+                </div>
+            </div>
+        </nav>
+        <section class="py-xxl-10 pb-0" id="home">
+            <div class="bg-holder bg-size"
+                style="background-image: url('{{ bg_url }}'); background-position: top center; background-size: cover">
+            </div>
+            <!--/.bg-holder-->
+
+            <div class="container">
+                <div class="row min-vh-xl-100 min-vh-xxl-25">
+                    <div class="col-md-5 col-xl-6 col-xxl-7 order-0 order-md-1 text-end"><img class="pt-7 pt-md-0 w-100"
+                            src="{{ url_for('static', filename='img/gallery/hero.png') }}" alt="hero-header" /></div>
+                    <div class="col-md-75 col-xl-6 col-xxl-5 text-md-start text-center py-6">
+                        <h1 class="fw-light font-base fs-6 fs-xxl-7">Elevate <strong>Your
+                                Life</strong><br />One&nbsp;<strong> Breath at a Time.</strong></h1>
+                        <p class="fs-1 mb-5">
+                            Discover if you have asthma with our 24/7 expert system. Get </br> accurate results and
+                            personalized guidance, anytime.</p>
+                        <a class="btn btn-lg btn-primary rounded-pill" href="#cekAsma" role="button">Check Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="bg-secondary" id="artikel">
+            <div class="bg-holder" style="background-image: url('{{ eyecare_url }}'); background-size: contain"></div>
+            <!--/.bg-holder-->
+
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-5 col-xxl-6"><img class="img-fluid"
+                            src="{{ url_for('static', filename='img/gallery/eye-care.png') }}" alt="..." /></div>
+                    <div class="col-md-7 col-xxl-6 text-center text-md-start">
+                        <h2 class="fw-bold text-light mb-4 mt-4 mt-lg-0">Apakah asma bisa sembuh?</h2>
+                        <p class="text-light">
+                            Gejala asma bisa kambuh kapan saja dan terasa sangat mengganggu.<br
+                                class="d-none d-sm-block" />Kondisi ini tak jarang membuat penderitanya bertanya-tanya,
+                            <br class="d-none d-sm-block" />apakah asma bisa sembuh atau tidak? Agar tidak makin
+                            khawatir dengan<br class="d-none d-sm-block" /> hal tersebut, ketahui dulu faktanya berikut
+                            ini.
+                        </p>
+                        <div class="py-3"><a class="btn btn-lg btn-light rounded-pill"
+                                href="https://www.alodokter.com/apakah-asma-bisa-sembuh-cek-faktanya-di-sini"
+                                role="button">Baca Selengkapnya</a></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================-->
+        <!-- <section> begin ============================-->
+        <section class="pb-0" id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 py-3">
+                        <div class="bg-holder bg-size"
+                            style="background-image: url('{{ aboutUs_url }}'); background-position: top center; background-size: contain">
+                        </div>
+                        <!--/.bg-holder-->
+
+                        <h1 class="text-center">ABOUT US</h1>
+                    </div>
+                </div>
+            </div>
+            <!-- end of .container-->
+        </section>
+        <!-- <section> close ============================-->
+        <!-- ============================================-->
+
+        <section class="py-5">
+            <div class="bg-holder bg-size"
+                style="background-image: url('{{ about_url }}'); background-position: top center; background-size: contain">
+            </div>
+            <!--/.bg-holder-->
+
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6 order-lg-1 mb-5 mb-lg-0"><img class="fit-cover rounded-circle w-100"
+                            src="{{ url_for('static', filename='img/gallery/health-care.png') }}" alt="..." /></div>
+                    <div class="col-md-6 text-center text-md-start">
+                        <h2 class="fw-bold mb-4">We are developing an asthma care <br class="d-none d-sm-block" />system
+                            centered around you.</h2>
+                        <p>
+                            Website ini merupakan sistem pakar asma yang dirancang untuk <br
+                                class="d-none d-sm-block" />membantu Anda mengidentifikasi dan mengelola kondisi asma
+                            dengan <br class="d-none d-sm-block" />mudah dan efektif. Kami menggunakan teknologi
+                            mutakhir untuk<br class="d-none d-sm-block" /> memberikan penilaian yang akurat dan panduan
+                            yang dipersonalisasi, kapan saja dan di mana saja.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- <section> begin ============================-->
+        <section class="py-5" id="cekAsma">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 py-3">
+                        <div class="bg-holder bg-size"
+                            style="background-image: url('{{ people_url }}'); background-position: top center; background-size: contain">
+                        </div>
+                        <!--/.bg-holder-->
+
+                        <h1 class="text-center">CEK GEJALA ASMA</h1>
+                    </div>
+                </div>
+            </div>
+            <!-- end of .container-->
+        </section>
+        <!-- <section> close ============================-->
+        <!-- ============================================-->
+        <!--  -->
+        <section class="py-5">
+            <div class="container">
+                <form action="/diagnose" method="POST">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="usia">Age:</label>
+                        <input type="text" id="usia" name="usia" required>
+                    </div>
+
+                    <!-- Existing symptom input -->
+                    <div class="form-group">
+                        <label for="inputGejala">Gejala:</label><br>
+                        {% for key, value in gejala_data.items() %}
+                        <input type="checkbox" id="gejala_{{ key }}" name="inputGejala" value="{{ key }}">
+                        <label for="gejala_{{ key }}">{{ value }}</label><br>
+                        {% endfor %}
+                    </div>
+
+                    <!-- New environmental factors input -->
+                    <div class="form-group">
+                        <label for="inputEnvironmental">Environmental Factors:</label><br>
+                        {% for key, value in environmental_factors.items() %}
+                        <input type="checkbox" id="env_{{ key }}" name="inputEnvironmental" value="{{ key }}">
+                        <label for="env_{{ key }}">{{ value }}</label><br>
+                        {% endfor %}
+                    </div>
+
+                    <!-- New triggers input -->
+                    <div class="form-group">
+                        <label for="inputTrigger">Triggers:</label><br>
+                        {% for key, value in triggers.items() %}
+                        <input type="checkbox" id="trig_{{ key }}" name="inputTrigger" value="{{ key }}">
+                        <label for="trig_{{ key }}">{{ value }}</label><br>
+                        {% endfor %}
+                    </div>
+
+                    <!-- Existing name and age input -->
+
+
+                    <button type="submit" class="btn btn-primary">Diagnose</button>
+                </form>
+            </div>
+
+        </section>
+
+
+
+        <!-- ============================================-->
+        <!-- <section> begin ============================-->
+        <section class="py-5" id="blog">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 py-3">
+                        <div class="bg-holder bg-size"
+                            style="background-image: url('{{ blog_url }}'); background-position: top center; background-size: contain">
+                        </div>
+                        <!--/.bg-holder-->
+
+                        <h1 class="text-center">RECENT BLOGPOSTS</h1>
+                    </div>
+                </div>
+            </div>
+            <!-- end of .container-->
+        </section>
+        <!-- <section> close ============================-->
+        <!-- ============================================-->
+
+        <section>
+            <div class="bg-holder bg-size"
+                style="background-image: url('{{ dotbg_url }}'); background-position: top left; background-size: auto">
+            </div>
+            <!--/.bg-holder-->
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-lg-3 mb-4">
+                        <div class="card h-100 shadow card-span rounded-3">
+                            <img class="card-img-top rounded-top-3"
+                                src="{{ url_for('static', filename='img/gallery/covid-19.png') }}" alt="news" />
+                            <div class="card-body">
+                                <span class="fs--1 text-primary me-3">Health</span>
+                                <svg class="bi bi-calendar2 me-2" xmlns="http://www.w3.org/2000/svg" width="12"
+                                    height="12" fill="currentColor" viewBox="0 0 16 16">
+                                    <path
+                                        d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H2z">
+                                    </path>
+                                    <path
+                                        d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V4z">
+                                    </path>
+                                </svg>
+                                ><span class="fs--1 text-900">Aug 12, 2022</span><span class="fs--1"></span>
+                                <h5 class="font-base fs-lg-0 fs-xl-1 my-3">6 Prinsip Pola Hidup Sehat untuk Pengidap
+                                    Asman</h5>
+                                <a class="stretched-link"
+                                    href="https://hellosehat.com/pernapasan/asma/pola-hidup-sehat-untuk-penderita-asma/">Baca
+                                    Selengkapnya</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3 mb-4">
+                        <div class="card h-100 shadow card-span rounded-3">
+                            <img class="card-img-top rounded-top-3"
+                                src="{{ url_for('static', filename='img/gallery/laboratories.png') }}" alt="news" />
+                            <div class="card-body">
+                                <span class="fs--1 text-primary me-3">Lifestyle</span>
+                                <svg class="bi bi-calendar2 me-2" xmlns="http://www.w3.org/2000/svg" width="12"
+                                    height="12" fill="currentColor" viewBox="0 0 16 16">
+                                    <path
+                                        d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H2z">
+                                    </path>
+                                    <path
+                                        d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V4z">
+                                    </path>
+                                </svg>
+                                ><span class="fs--1 text-900">Sep 02, 2021</span><span class="fs--1"></span>
+                                <h5 class="font-base fs-lg-0 fs-xl-1 my-3">Ini Hal yang Harus dan Jangan Dilakukan oleh
+                                    Pengidap Asma</h5>
+                                <a class="stretched-link"
+                                    href="https://www.halodoc.com/artikel/ini-hal-yang-harus-dan-jangan-dilakukan-oleh-pengidap-asma">Baca
+                                    Selengkapnya</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3 mb-4">
+                        <div class="card h-100 shadow card-span rounded-3">
+                            <img class="card-img-top rounded-top-3"
+                                src="{{ url_for('static', filename='img/gallery/nicotine.png') }}" alt="news" />
+                            <div class="card-body">
+                                <span class="fs--1 text-primary me-3">Health</span>
+                                <svg class="bi bi-calendar2 me-2" xmlns="http://www.w3.org/2000/svg" width="12"
+                                    height="12" fill="currentColor" viewBox="0 0 16 16">
+                                    <path
+                                        d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H2z">
+                                    </path>
+                                    <path
+                                        d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V4z">
+                                    </path>
+                                </svg>
+                                ><span class="fs--1 text-900">Nov 10, 2022</span><span class="fs--1"></span>
+                                <h5 class="font-base fs-lg-0 fs-xl-1 my-3">Benarkah Penyakit Asma Dapat Menular? Ini
+                                    Faktanya!</h5>
+                                <a class="stretched-link"
+                                    href="https://www.halodoc.com/artikel/benarkah-penyakit-asma-dapat-menular-ini-faktanya">Baca
+                                    Selengkapnya</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3 mb-4">
+                        <div class="card h-100 shadow card-span rounded-3">
+                            <img class="card-img-top rounded-top-3"
+                                src="{{ url_for('static', filename='img/gallery/treatment.png') }}" alt="news" />
+                            <div class="card-body">
+                                <span class="fs--1 text-primary me-3">Health</span>
+                                <svg class="bi bi-calendar2 me-2" xmlns="http://www.w3.org/2000/svg" width="12"
+                                    height="12" fill="currentColor" viewBox="0 0 16 16">
+                                    <path
+                                        d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H2z">
+                                    </path>
+                                    <path
+                                        d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V4z">
+                                    </path>
+                                </svg>
+                                ><span class="fs--1 text-900">Nov 07, 2023</span><span class="fs--1"></span>
+                                <h5 class="font-base fs-lg-0 fs-xl-1 my-3">Berbagai Gejala Asma, dari yang Ringan Hingga
+                                    Gawat</h5>
+                                <a class="stretched-link"
+                                    href="https://hellosehat.com/pernapasan/asma/gejala-asma/">Baca Selengkapnya</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-0 bg-secondary">
+            <div class="bg-holder opacity-25"
+                style="background-image: url('{{ dotbg_url }}'); background-position: top left; margin-top: -3.125rem; background-size: auto">
+            </div>
+            <!--/.bg-holder-->
+
+            <div class="container">
+                <div class="row py-4 d-flex justify-content-between align-items-center">
+                    <div class="col-auto mb-4">
+                        <a class="text-decoration-none" href="#"><img
+                                src="{{ url_for('static', filename='img/gallery/footer-logo.png') }}" height="51"
+                                alt="" /></a>
+                    </div>
+                    <div class="col-auto mb-3 text-center">
+                        <h5 class="lh-lg fw-bold mb-2 text-light font-sans-serif">434221034</h5>
+                        <ul class="list-unstyled">
+                            <li class="lh-lg"><a class="footer-link" href="#!">Anisa Maharani</a></li>
                         </ul>
-                        <a class="btn btn-sm btn-outline-primary rounded-pill order-1 order-lg-0 ms-lg-4" href="#cekAsma">Cek Asma</a>
+                    </div>
+                    <div class="col-auto mb-3 text-center">
+                        <h5 class="lh-lg fw-bold text-light mb-2 font-sans-serif">434221051</h5>
+                        <ul class="list-unstyled">
+                            <li class="lh-lg"><a class="footer-link" href="#!">Fairuz Zahira</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-auto mb-3 text-center">
+                        <h5 class="lh-lg fw-bold text-light mb-2 font-sans-serif">434221052</h5>
+                        <ul class="list-unstyled">
+                            <li class="lh-lg"><a class="footer-link" href="#!">Amelia Nur Indah P</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-auto mb-3 text-center">
+                        <h5 class="lh-lg fw-bold text-light mb-2 font-sans-serif">434221057</h5>
+                        <ul class="list-unstyled">
+                            <li class="lh-lg"><a class="footer-link" href="#!">Lintang Anggraini Nur L.R</a></li>
+                        </ul>
                     </div>
                 </div>
-            </nav>
-            <section class="py-xxl-10 pb-0" id="home">
-                <div class="bg-holder bg-size" style="background-image: url('{{ bg_url }}'); background-position: top center; background-size: cover"></div>
-                <!--/.bg-holder-->
+            </div>
 
+            <!-- ============================================-->
+            <!-- <section> begin ============================-->
+            <section class="py-0 bg-primary">
                 <div class="container">
-                    <div class="row min-vh-xl-100 min-vh-xxl-25">
-                        <div class="col-md-5 col-xl-6 col-xxl-7 order-0 order-md-1 text-end"><img class="pt-7 pt-md-0 w-100" src="{{ url_for('static', filename='img/gallery/hero.png') }}" alt="hero-header" /></div>
-                        <div class="col-md-75 col-xl-6 col-xxl-5 text-md-start text-center py-6">
-                            <h1 class="fw-light font-base fs-6 fs-xxl-7">Elevate <strong>Your Life</strong><br />One&nbsp;<strong> Breath at a Time.</strong></h1>
-                            <p class="fs-1 mb-5">
-                                Discover if you have asthma with our 24/7 expert system. Get </br> accurate results and personalized guidance, anytime.</p>
-                            <a class="btn btn-lg btn-primary rounded-pill" href="#cekAsma" role="button">Check Now</a>
+                    <div class="row justify-content-md-between justify-content-evenly py-2">
+                        <div class="col-12 col-sm-8 col-md-6 col-lg-auto text-center text-md-start">
+                            <p class="fs--1 my-2 fw-bold text-200">Artificial Intelligence Practicum, 2024</p>
                         </div>
-                    </div>
-                </div>
-            </section>
-        
-
-            <section class="bg-secondary" id="artikel">
-                <div class="bg-holder" style="background-image: url('{{ eyecare_url }}'); background-size: contain"></div>
-                <!--/.bg-holder-->
-
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-md-5 col-xxl-6"><img class="img-fluid" src="{{ url_for('static', filename='img/gallery/eye-care.png') }}" alt="..." /></div>
-                        <div class="col-md-7 col-xxl-6 text-center text-md-start">
-                            <h2 class="fw-bold text-light mb-4 mt-4 mt-lg-0">Apakah asma bisa sembuh?</h2>
-                            <p class="text-light">
-                                Gejala asma bisa kambuh kapan saja dan terasa sangat mengganggu.<br class="d-none d-sm-block" />Kondisi ini tak jarang membuat penderitanya bertanya-tanya, <br class="d-none d-sm-block" />apakah asma bisa sembuh atau tidak? Agar tidak makin khawatir dengan<br class="d-none d-sm-block" /> hal tersebut, ketahui dulu faktanya berikut ini.
+                        <div class="col-12 col-sm-8 col-md-6">
+                            <p class="fs--1 my-2 text-center text-md-end text-200">
+                                Made with&nbsp;
+                                <svg class="bi bi-suit-heart-fill" xmlns="http://www.w3.org/2000/svg" width="12"
+                                    height="12" fill="#F95C19" viewBox="0 0 16 16">
+                                    <path
+                                        d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z">
+                                    </path>
+                                </svg>
+                                >&nbsp;by&nbsp;<a class="fw-bold text-info" href="https://themewagon.com/"
+                                    target="_blank">Kelompok BreathEase</a>
                             </p>
-                            <div class="py-3"><a class="btn btn-lg btn-light rounded-pill" href="https://www.alodokter.com/apakah-asma-bisa-sembuh-cek-faktanya-di-sini" role="button">Baca Selengkapnya</a></div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- ============================================-->
-            <!-- <section> begin ============================-->
-            <section class="pb-0" id="about">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 py-3">
-                            <div class="bg-holder bg-size" style="background-image: url('{{ aboutUs_url }}'); background-position: top center; background-size: contain"></div>
-                            <!--/.bg-holder-->
-
-                            <h1 class="text-center">ABOUT US</h1>
                         </div>
                     </div>
                 </div>
@@ -108,238 +419,10 @@
             </section>
             <!-- <section> close ============================-->
             <!-- ============================================-->
+        </section>
+    </main>
 
-            <section class="py-5">
-                <div class="bg-holder bg-size" style="background-image: url('{{ about_url }}'); background-position: top center; background-size: contain"></div>
-                <!--/.bg-holder-->
-
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-md-6 order-lg-1 mb-5 mb-lg-0"><img class="fit-cover rounded-circle w-100" src="{{ url_for('static', filename='img/gallery/health-care.png') }}" alt="..." /></div>
-                        <div class="col-md-6 text-center text-md-start">
-                            <h2 class="fw-bold mb-4">We are developing an asthma care <br class="d-none d-sm-block" />system centered around you.</h2>
-                            <p>
-                                Website ini merupakan sistem pakar asma yang dirancang untuk <br class="d-none d-sm-block" />membantu Anda mengidentifikasi dan mengelola kondisi asma dengan <br class="d-none d-sm-block" />mudah dan efektif. Kami menggunakan teknologi mutakhir untuk<br class="d-none d-sm-block" /> memberikan penilaian yang akurat dan panduan yang dipersonalisasi, kapan saja dan di mana saja.
-                            </p>
-                         
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- <section> begin ============================-->
-            <section class="py-5" id="cekAsma">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 py-3">
-                            <div class="bg-holder bg-size" style="background-image: url('{{ people_url }}'); background-position: top center; background-size: contain"></div>
-                            <!--/.bg-holder-->
-
-                            <h1 class="text-center">CEK GEJALA ASMA</h1>
-                        </div>
-                    </div>
-                </div>
-                <!-- end of .container-->
-            </section>
-            <!-- <section> close ============================-->
-            <!-- ============================================-->
-            <!--  -->
-            <form action="/diagnose" method="POST">
-                <!-- Existing symptom input -->
-                <div class="form-group">
-                    <label for="inputGejala">Gejala:</label><br>
-                    {% for key, value in gejala_data.items() %}
-                    <input type="checkbox" id="gejala_{{ key }}" name="inputGejala" value="{{ key }}">
-                    <label for="gejala_{{ key }}">{{ value }}</label><br>
-                    {% endfor %}
-                </div>
-            
-                <!-- New environmental factors input -->
-                <div class="form-group">
-                    <label for="inputEnvironmental">Environmental Factors:</label><br>
-                    {% for key, value in environmental_factors.items() %}
-                    <input type="checkbox" id="env_{{ key }}" name="inputEnvironmental" value="{{ key }}">
-                    <label for="env_{{ key }}">{{ value }}</label><br>
-                    {% endfor %}
-                </div>
-            
-                <!-- New triggers input -->
-                <div class="form-group">
-                    <label for="inputTrigger">Triggers:</label><br>
-                    {% for key, value in triggers.items() %}
-                    <input type="checkbox" id="trig_{{ key }}" name="inputTrigger" value="{{ key }}">
-                    <label for="trig_{{ key }}">{{ value }}</label><br>
-                    {% endfor %}
-                </div>
-            
-                <!-- Existing name and age input -->
-                <div class="form-group">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="usia">Age:</label>
-                    <input type="text" id="usia" name="usia" required>
-                </div>
-            
-                <button type="submit" class="btn btn-primary">Diagnose</button>
-            </form>
-            
-
-            <!-- ============================================-->
-            <!-- <section> begin ============================-->
-            <section class="py-5" id="blog">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 py-3">
-                            <div class="bg-holder bg-size" style="background-image: url('{{ blog_url }}'); background-position: top center; background-size: contain"></div>
-                            <!--/.bg-holder-->
-
-                            <h1 class="text-center">RECENT BLOGPOSTS</h1>
-                        </div>
-                    </div>
-                </div>
-                <!-- end of .container-->
-            </section>
-            <!-- <section> close ============================-->
-            <!-- ============================================-->
-
-            <section>
-                <div class="bg-holder bg-size" style="background-image: url('{{ dotbg_url }}'); background-position: top left; background-size: auto"></div>
-                <!--/.bg-holder-->
-
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-6 col-lg-3 mb-4">
-                            <div class="card h-100 shadow card-span rounded-3">
-                                <img class="card-img-top rounded-top-3" src="{{ url_for('static', filename='img/gallery/covid-19.png') }}" alt="news" />
-                                <div class="card-body">
-                                    <span class="fs--1 text-primary me-3">Health</span>
-                                    <svg class="bi bi-calendar2 me-2" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
-                                        <path
-                                            d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H2z"
-                                        ></path>
-                                        <path d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V4z"></path></svg>
-                                    ><span class="fs--1 text-900">Aug 12, 2022</span><span class="fs--1"></span>
-                                    <h5 class="font-base fs-lg-0 fs-xl-1 my-3">6 Prinsip Pola Hidup Sehat untuk Pengidap Asman</h5>
-                                    <a class="stretched-link" href="https://hellosehat.com/pernapasan/asma/pola-hidup-sehat-untuk-penderita-asma/">Baca Selengkapnya</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-lg-3 mb-4">
-                            <div class="card h-100 shadow card-span rounded-3">
-                                <img class="card-img-top rounded-top-3" src="{{ url_for('static', filename='img/gallery/laboratories.png') }}" alt="news" />
-                                <div class="card-body">
-                                    <span class="fs--1 text-primary me-3">Lifestyle</span>
-                                    <svg class="bi bi-calendar2 me-2" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
-                                        <path
-                                            d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H2z"
-                                        ></path>
-                                        <path d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V4z"></path></svg>
-                                    ><span class="fs--1 text-900">Sep 02, 2021</span><span class="fs--1"></span>
-                                    <h5 class="font-base fs-lg-0 fs-xl-1 my-3">Ini Hal yang Harus dan Jangan Dilakukan oleh Pengidap Asma</h5>
-                                    <a class="stretched-link" href="https://www.halodoc.com/artikel/ini-hal-yang-harus-dan-jangan-dilakukan-oleh-pengidap-asma">Baca Selengkapnya</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-lg-3 mb-4">
-                            <div class="card h-100 shadow card-span rounded-3">
-                                <img class="card-img-top rounded-top-3" src="{{ url_for('static', filename='img/gallery/nicotine.png') }}" alt="news" />
-                                <div class="card-body">
-                                    <span class="fs--1 text-primary me-3">Health</span>
-                                    <svg class="bi bi-calendar2 me-2" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
-                                        <path
-                                            d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H2z"
-                                        ></path>
-                                        <path d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V4z"></path></svg>
-                                    ><span class="fs--1 text-900">Nov 10, 2022</span><span class="fs--1"></span>
-                                    <h5 class="font-base fs-lg-0 fs-xl-1 my-3">Benarkah Penyakit Asma Dapat Menular? Ini Faktanya!</h5>
-                                    <a class="stretched-link" href="https://www.halodoc.com/artikel/benarkah-penyakit-asma-dapat-menular-ini-faktanya">Baca Selengkapnya</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-lg-3 mb-4">
-                            <div class="card h-100 shadow card-span rounded-3">
-                                <img class="card-img-top rounded-top-3" src="{{ url_for('static', filename='img/gallery/treatment.png') }}" alt="news" />
-                                <div class="card-body">
-                                    <span class="fs--1 text-primary me-3">Health</span>
-                                    <svg class="bi bi-calendar2 me-2" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
-                                        <path
-                                            d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H2z"
-                                        ></path>
-                                        <path d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V4z"></path></svg>
-                                    ><span class="fs--1 text-900">Nov 07, 2023</span><span class="fs--1"></span>
-                                    <h5 class="font-base fs-lg-0 fs-xl-1 my-3">Berbagai Gejala Asma, dari yang Ringan Hingga Gawat</h5>
-                                    <a class="stretched-link" href="https://hellosehat.com/pernapasan/asma/gejala-asma/">Baca Selengkapnya</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-           
-            <section class="py-0 bg-secondary">
-                <div class="bg-holder opacity-25" style="background-image: url('{{ dotbg_url }}'); background-position: top left; margin-top: -3.125rem; background-size: auto"></div>
-                <!--/.bg-holder-->
-
-                <div class="container">
-                    <div class="row py-8 d-flex justify-content-between align-items-center">
-                        <div class="col-auto mb-4">
-                            <a class="text-decoration-none" href="#"><img src="{{ url_for('static', filename='img/gallery/footer-logo.png') }}" height="51" alt="" /></a>
-                        </div>
-                        <div class="col-auto mb-3 text-center">
-                            <h5 class="lh-lg fw-bold mb-2 text-light font-sans-serif">434221034</h5>
-                            <ul class="list-unstyled">
-                                <li class="lh-lg"><a class="footer-link" href="#!">Anisa Maharani</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-auto mb-3 text-center">
-                            <h5 class="lh-lg fw-bold text-light mb-2 font-sans-serif">434221051</h5>
-                            <ul class="list-unstyled">
-                                <li class="lh-lg"><a class="footer-link" href="#!">Fairuz Zahira</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-auto mb-3 text-center">
-                            <h5 class="lh-lg fw-bold text-light mb-2 font-sans-serif">434221052</h5>
-                            <ul class="list-unstyled">
-                                <li class="lh-lg"><a class="footer-link" href="#!">Amelia Nur Indah P</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-auto mb-3 text-center">
-                            <h5 class="lh-lg fw-bold text-light mb-2 font-sans-serif">434221057</h5>
-                            <ul class="list-unstyled">
-                                <li class="lh-lg"><a class="footer-link" href="#!">Lintang Anggraini Nur L.R</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ============================================-->
-                <!-- <section> begin ============================-->
-                <section class="py-0 bg-primary">
-                    <div class="container">
-                        <div class="row justify-content-md-between justify-content-evenly py-4">
-                            <div class="col-12 col-sm-8 col-md-6 col-lg-auto text-center text-md-start">
-                                <p class="fs--1 my-2 fw-bold text-200">Artificial Intelligence Practicum, 2024</p>
-                            </div>
-                            <div class="col-12 col-sm-8 col-md-6">
-                                <p class="fs--1 my-2 text-center text-md-end text-200">
-                                    Made with&nbsp;
-                                    <svg class="bi bi-suit-heart-fill" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#F95C19" viewBox="0 0 16 16">
-                                        <path d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z"></path></svg>
-                                    >&nbsp;by&nbsp;<a class="fw-bold text-info" href="https://themewagon.com/" target="_blank">Kelompok BreathEase</a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end of .container-->
-                </section>
-                <!-- <section> close ============================-->
-                <!-- ============================================-->
-            </section>
-        </main>
-     
-        <!-- <script>
+    <!-- <script>
             function getSelectedOptions() {
                 var selectedOptions = [];
                 var selectBox = document.getElementById("inputGejala");
@@ -350,19 +433,22 @@
             }
         </script> -->
 
-        
 
 
-        <script src="{{ url_for('static', filename='vendors/@popperjs/popper.min.js') }}"></script>
-        <script src="{{ url_for('static', filename='vendors/bootstrap/bootstrap.min.js') }}"></script>
-        <script src="{{ url_for('static', filename='vendors/is/is.min.js') }}"></script>
-        <script src="https://scripts.sirv.com/sirvjs/v3/sirv.js"></script>
-        <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
-        <script src="{{ url_for('static', filename='vendors/fontawesome/all.min.js') }}"></script>
-        <script src="{{ url_for('static', filename='js/theme.js') }}"></script>
-        
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&amp;family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100&amp;display=swap" rel="stylesheet" />
-    </body>
+
+    <script src="{{ url_for('static', filename='vendors/@popperjs/popper.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendors/bootstrap/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendors/is/is.min.js') }}"></script>
+    <script src="https://scripts.sirv.com/sirvjs/v3/sirv.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
+    <script src="{{ url_for('static', filename='vendors/fontawesome/all.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/theme.js') }}"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fjalla+One&amp;family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100&amp;display=swap"
+        rel="stylesheet" />
+</body>
+
 </html>

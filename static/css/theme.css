@@ -78,13 +78,22 @@ hr:not([size]) {
   height: 1px;
 }
 
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+h1, .h1, h2, .h2, h3, .h3, h5, .h5, h6, .h6 {
   margin-top: 0;
   margin-bottom: 0.5rem;
   font-family: "Fjalla One", "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: 700;
   line-height: 1.2;
   color: #820300;
+}
+
+h4, .h4{
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-family: "Fjalla One";
+  font-weight: 200;
+  line-height: 1.2;
+  color: var(--bs-dark);
 }
 
 h1, .h1 {
@@ -5210,6 +5219,31 @@ fieldset:disabled .btn {
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.5rem;
+}
+
+.card-new {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: rgba(230, 230, 230, 0.3);
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.5rem;
+}
+
+.card-new h4{
+  color: var(--bs-dark);
+}
+
+.card-new li, p{
+  color: var(--bs-blue);
 }
 
 .card > hr {
@@ -18522,4 +18556,36 @@ ul {
 |   User Styles
 -----------------------------------------------*/
 
-/*# sourceMappingURL=theme.css.map */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: var(--bs-blue);
+}
+
+.form-group input[type="text"],
+.form-group input[type="checkbox"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.form-group input[type="checkbox"] {
+  width: auto;
+  margin-right: 10px;
+}
+
+.form-group label[for^="gejala_"],
+.form-group label[for^="env_"],
+.form-group label[for^="trig_"] {
+  display: inline-block;
+  margin: 0 0 10px 25px;
+  font-weight: normal;
+  color: var(--bs-gray-dark);
+}
